@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Iqra Khan | Software Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -13,11 +13,12 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Poppins;
+font-family:Inter;
+scroll-behavior:smooth;
 }
 
 body{
-background:#0f172a;
+background:#020617;
 color:white;
 }
 
@@ -27,12 +28,14 @@ display:flex;
 justify-content:space-between;
 padding:20px 60px;
 background:#020617;
+position:sticky;
+top:0;
 }
 
 nav a{
 color:white;
-text-decoration:none;
 margin-left:20px;
+text-decoration:none;
 }
 
 /* HERO */
@@ -43,46 +46,46 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+background:linear-gradient(135deg,#020617,#0f172a);
 }
 
 .hero h1{
-font-size:55px;
+font-size:60px;
 }
 
-.hero span{
+.typing{
 color:#38bdf8;
-}
-
-.hero p{
-color:#94a3b8;
-margin:15px;
+font-size:24px;
+margin-top:10px;
 }
 
 .btn{
 background:#38bdf8;
-padding:12px 25px;
+color:black;
+padding:12px 28px;
 border-radius:8px;
 text-decoration:none;
-color:black;
-font-weight:bold;
-margin:10px;
+margin:15px;
 display:inline-block;
+font-weight:bold;
 }
 
 /* SECTION */
 section{
-padding:70px 10%;
+padding:80px 10%;
 text-align:center;
 }
 
+/* GLASS CARD */
 .card{
-background:#1e293b;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
 padding:30px;
-border-radius:12px;
-margin-top:20px;
+border-radius:14px;
+margin-top:25px;
 }
 
-/* SKILLS GRID */
+/* SKILLS */
 .skills{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -91,7 +94,7 @@ margin-top:30px;
 }
 
 .skill{
-background:#1e293b;
+background:#0f172a;
 padding:20px;
 border-radius:10px;
 }
@@ -100,26 +103,26 @@ border-radius:10px;
 .projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
+gap:25px;
 margin-top:30px;
 }
 
 .project{
-background:#1e293b;
+background:#0f172a;
 padding:25px;
 border-radius:12px;
-transition:0.3s;
+transition:.3s;
 }
 
 .project:hover{
 transform:translateY(-10px);
+box-shadow:0 0 20px #38bdf8;
 }
 
 /* FOOTER */
 footer{
-background:#020617;
-padding:20px;
 text-align:center;
+padding:20px;
 color:#94a3b8;
 }
 
@@ -131,24 +134,25 @@ color:#94a3b8;
 <nav>
 <h2>Iqra Khan</h2>
 <div>
-<a href="https://github.com/IqraOg">GitHub</a>
-<a href="#">LinkedIn</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 </div>
 </nav>
 
 <div class="hero">
-<h1>Hi, I'm <span>Iqra Khan</span></h1>
-<p>Software Engineer | Full Stack & Mobile Developer</p>
+<h1>Hi, I'm Iqra Khan 👋</h1>
+<div class="typing" id="typing"></div>
 
 <a class="btn" href="#">Download Resume</a>
-<a class="btn" href="https://github.com/IqraOg">View GitHub</a>
+<a class="btn" href="https://github.com/IqraOg">GitHub</a>
 </div>
 
-<section>
+<section id="about">
 <h2>About Me</h2>
 <div class="card">
-Software Developer with 2+ years experience building Government Web & Mobile Applications at Pharmacy Council of India (PCI).
-Experienced in Python, Django, Wagtail CMS, Flutter, Angular, Ionic, iOS & Android deployment.
+Software Engineer with 2+ years experience building Government Web & Mobile Applications at Pharmacy Council of India (PCI).
+Specialized in Python, Flutter, Angular, Ionic, Django, Wagtail CMS and cross-platform mobile deployments.
 </div>
 </section>
 
@@ -166,31 +170,31 @@ Experienced in Python, Django, Wagtail CMS, Flutter, Angular, Ionic, iOS & Andro
 
 </section>
 
-<section>
+<section id="projects">
 <h2>Projects</h2>
 
 <div class="projects">
 
 <div class="project">
 <h3>PCI Inspection Application</h3>
-<p>Hybrid mobile inspection system built using Angular, Ionic and Tailwind CSS.</p>
+<p>Inspection workflow mobile application using Angular, Ionic & Tailwind.</p>
 </div>
 
 <div class="project">
 <h3>PCI Signature Application</h3>
-<p>Digital approval and verification workflow system.</p>
+<p>Digital approval and verification system.</p>
 </div>
 
 <div class="project">
 <h3>PCI Website</h3>
-<p>Government CMS website developed using Django & Wagtail.</p>
+<p>Government CMS website built using Django & Wagtail CMS.</p>
 </div>
 
 </div>
 
 </section>
 
-<section>
+<section id="contact">
 <h2>Contact</h2>
 <div class="card">
 Email: yourmail@email.com <br><br>
@@ -201,6 +205,19 @@ GitHub: github.com/IqraOg
 <footer>
 © 2026 Iqra Khan | Software Engineer
 </footer>
+
+<script>
+const text="Full Stack & Mobile Developer | Flutter • Python • Angular";
+let i=0;
+function typing(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(typing,60);
+}
+}
+typing();
+</script>
 
 </body>
 </html>
