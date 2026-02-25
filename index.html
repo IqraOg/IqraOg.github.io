@@ -1,36 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Iqra Khan | Software Engineer</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
-font-family:Arial;
+font-family:Poppins;
 background:#0f172a;
 color:white;
+}
+
+/* NAVBAR */
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:#020617;
+align-items:center;
+}
+
+nav h2{color:#38bdf8;}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+/* HERO */
+header{
+text-align:center;
+padding:120px 20px;
+}
+
+header h1{
+font-size:52px;
+margin:0;
+}
+
+header span{
+color:#38bdf8;
+}
+
+.btn{
+background:#38bdf8;
+color:black;
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+margin:10px;
+display:inline-block;
+}
+
+/* SECTIONS */
+section{
+padding:60px 20px;
 text-align:center;
 }
 
-header{
-padding:100px;
-background:#020617;
-}
-
-h1{font-size:48px;margin:0;}
-
-section{padding:50px;}
-
 .card{
 background:#1e293b;
-margin:20px auto;
 padding:25px;
-width:80%;
+margin:20px auto;
+width:85%;
 border-radius:12px;
 }
 
+/* PROJECTS */
 .projects{
 display:flex;
 flex-wrap:wrap;
@@ -43,11 +86,19 @@ margin:15px;
 padding:20px;
 width:300px;
 border-radius:12px;
+transition:0.3s;
 }
 
-a{
-color:#38bdf8;
-text-decoration:none;
+.project:hover{
+transform:translateY(-8px);
+}
+
+/* FOOTER */
+footer{
+background:#020617;
+padding:20px;
+text-align:center;
+color:#94a3b8;
 }
 
 </style>
@@ -55,18 +106,36 @@ text-decoration:none;
 
 <body>
 
+<nav>
+<h2>Iqra Khan</h2>
+<div>
+<a href="https://github.com/IqraOg">GitHub</a>
+<a href="#">LinkedIn</a>
+</div>
+</nav>
+
 <header>
-<h1>Iqra Khan</h1>
+<h1>Hi, I'm <span>Iqra Khan</span></h1>
 <p>Software Engineer | Full Stack & Mobile Developer</p>
-<p>Python • Flutter • Angular • Ionic • iOS • Android</p>
+
+<a class="btn" href="#">Download Resume</a>
+<a class="btn" href="https://github.com/IqraOg">View GitHub</a>
 </header>
 
 <section>
-<div class="card">
 <h2>About Me</h2>
+<div class="card">
 <p>
-Software Developer with 2+ years experience building Government Web & Mobile Applications at PCI.
+Software Developer with 2+ years experience delivering Government Web & Mobile Applications at Pharmacy Council of India (PCI).
+Experienced in Python, Flutter, Angular, Ionic, Django, Wagtail CMS and mobile deployments.
 </p>
+</div>
+</section>
+
+<section>
+<h2>Tech Stack</h2>
+<div class="card">
+Python • Django • Wagtail • Flutter • Dart • Angular • Ionic • Tailwind CSS • iOS • Android
 </div>
 </section>
 
@@ -77,28 +146,34 @@ Software Developer with 2+ years experience building Government Web & Mobile App
 
 <div class="project">
 <h3>PCI Inspection App</h3>
-<p>Angular + Ionic + Tailwind application.</p>
+<p>Inspection workflow application using Angular, Ionic and Tailwind.</p>
 </div>
 
 <div class="project">
-<h3>Signature App</h3>
-<p>Digital approval & verification system.</p>
+<h3>Signature Application</h3>
+<p>Digital approval and verification system for PCI.</p>
 </div>
 
 <div class="project">
 <h3>PCI Website</h3>
-<p>Django & Wagtail CMS website.</p>
+<p>Government CMS website built using Django & Wagtail.</p>
 </div>
 
 </div>
+
 </section>
 
-<section class="card">
+<section>
 <h2>Contact</h2>
+<div class="card">
 <p>Email: yourmail@email.com</p>
 <p><a href="https://github.com/IqraOg">GitHub</a></p>
-<p><a href="#">LinkedIn</a></p>
+</div>
 </section>
+
+<footer>
+<p>© 2026 Iqra Khan | Software Engineer</p>
+</footer>
 
 </body>
 </html>
