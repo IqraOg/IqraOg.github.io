@@ -3,221 +3,124 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Iqra Khan | Software Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Inter;
-scroll-behavior:smooth;
-}
-
-body{
-background:#020617;
-color:white;
-}
-
-/* NAVBAR */
-nav{
-display:flex;
-justify-content:space-between;
-padding:20px 60px;
-background:#020617;
-position:sticky;
-top:0;
-}
-
-nav a{
-color:white;
-margin-left:20px;
-text-decoration:none;
-}
-
-/* HERO */
-.hero{
-height:90vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(135deg,#020617,#0f172a);
-}
-
-.hero h1{
-font-size:60px;
-}
-
-.typing{
-color:#38bdf8;
-font-size:24px;
-margin-top:10px;
-}
-
-.btn{
-background:#38bdf8;
-color:black;
-padding:12px 28px;
-border-radius:8px;
-text-decoration:none;
-margin:15px;
-display:inline-block;
-font-weight:bold;
-}
-
-/* SECTION */
-section{
-padding:80px 10%;
-text-align:center;
-}
-
-/* GLASS CARD */
-.card{
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
-padding:30px;
-border-radius:14px;
-margin-top:25px;
-}
-
-/* SKILLS */
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-margin-top:30px;
-}
-
-.skill{
-background:#0f172a;
-padding:20px;
-border-radius:10px;
-}
-
-/* PROJECTS */
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-margin-top:30px;
-}
-
-.project{
-background:#0f172a;
-padding:25px;
-border-radius:12px;
-transition:.3s;
-}
-
-.project:hover{
-transform:translateY(-10px);
-box-shadow:0 0 20px #38bdf8;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:20px;
-color:#94a3b8;
-}
-
-</style>
 </head>
 
-<body>
+<body class="bg-slate-950 text-white font-sans">
 
-<nav>
-<h2>Iqra Khan</h2>
-<div>
+<!-- NAVBAR -->
+<nav class="flex justify-between p-6 bg-slate-900">
+<h1 class="text-xl font-bold text-sky-400">Iqra Khan</h1>
+
+<div class="space-x-6">
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 
-<div class="hero">
-<h1>Hi, I'm Iqra Khan 👋</h1>
-<div class="typing" id="typing"></div>
+<!-- HERO -->
+<section class="text-center py-28">
 
-<a class="btn" href="#">Download Resume</a>
-<a class="btn" href="https://github.com/IqraOg">GitHub</a>
-</div>
+<h1 class="text-5xl font-bold">
+Hi, I'm <span class="text-sky-400">Iqra Khan</span>
+</h1>
 
-<section id="about">
-<h2>About Me</h2>
-<div class="card">
-Software Engineer with 2+ years experience building Government Web & Mobile Applications at Pharmacy Council of India (PCI).
-Specialized in Python, Flutter, Angular, Ionic, Django, Wagtail CMS and cross-platform mobile deployments.
-</div>
-</section>
+<p class="mt-4 text-lg text-gray-400">
+Software Engineer | Full Stack & Mobile Developer
+</p>
 
-<section>
-<h2>Tech Stack</h2>
+<div class="mt-6 space-x-4">
+<a href="#" class="bg-sky-400 text-black px-6 py-3 rounded-lg font-semibold">
+Download Resume
+</a>
 
-<div class="skills">
-<div class="skill">Python / Django</div>
-<div class="skill">Wagtail CMS</div>
-<div class="skill">Flutter & Dart</div>
-<div class="skill">Angular + Ionic</div>
-<div class="skill">Tailwind CSS</div>
-<div class="skill">iOS & Android Apps</div>
+<a href="https://github.com/IqraOg" class="border border-sky-400 px-6 py-3 rounded-lg">
+GitHub
+</a>
 </div>
 
 </section>
 
-<section id="projects">
-<h2>Projects</h2>
+<!-- ABOUT -->
+<section id="about" class="max-w-4xl mx-auto text-center py-16">
+<h2 class="text-3xl font-bold text-sky-400">About Me</h2>
 
-<div class="projects">
-
-<div class="project">
-<h3>PCI Inspection Application</h3>
-<p>Inspection workflow mobile application using Angular, Ionic & Tailwind.</p>
-</div>
-
-<div class="project">
-<h3>PCI Signature Application</h3>
-<p>Digital approval and verification system.</p>
-</div>
-
-<div class="project">
-<h3>PCI Website</h3>
-<p>Government CMS website built using Django & Wagtail CMS.</p>
-</div>
-
-</div>
-
+<p class="mt-6 text-gray-300">
+Software Developer with 2+ years experience building Government Web & Mobile Applications at Pharmacy Council of India (PCI).
+Experienced in Python, Django, Wagtail CMS, Flutter, Angular, Ionic and mobile deployment.
+</p>
 </section>
 
-<section id="contact">
-<h2>Contact</h2>
-<div class="card">
-Email: yourmail@email.com <br><br>
-GitHub: github.com/IqraOg
+<!-- SKILLS -->
+<section class="py-16 bg-slate-900">
+<h2 class="text-center text-3xl font-bold text-sky-400">Tech Stack</h2>
+
+<div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-10">
+
+<div class="bg-slate-800 p-6 rounded-xl">Python / Django</div>
+<div class="bg-slate-800 p-6 rounded-xl">Wagtail CMS</div>
+<div class="bg-slate-800 p-6 rounded-xl">Flutter & Dart</div>
+<div class="bg-slate-800 p-6 rounded-xl">Angular + Ionic</div>
+<div class="bg-slate-800 p-6 rounded-xl">Tailwind CSS</div>
+<div class="bg-slate-800 p-6 rounded-xl">iOS & Android Apps</div>
+
 </div>
 </section>
 
-<footer>
+<!-- PROJECTS -->
+<section id="projects" class="py-16">
+
+<h2 class="text-center text-3xl font-bold text-sky-400">Projects</h2>
+
+<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10">
+
+<div class="bg-slate-900 p-6 rounded-xl hover:scale-105 transition">
+<h3 class="text-xl font-bold">PCI Inspection App</h3>
+<p class="mt-3 text-gray-400">
+Inspection workflow system using Angular, Ionic & Tailwind.
+</p>
+</div>
+
+<div class="bg-slate-900 p-6 rounded-xl hover:scale-105 transition">
+<h3 class="text-xl font-bold">Signature Application</h3>
+<p class="mt-3 text-gray-400">
+Digital approval & verification workflow.
+</p>
+</div>
+
+<div class="bg-slate-900 p-6 rounded-xl hover:scale-105 transition">
+<h3 class="text-xl font-bold">PCI Website</h3>
+<p class="mt-3 text-gray-400">
+Government CMS built using Django & Wagtail.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="text-center py-16 bg-slate-900">
+
+<h2 class="text-3xl font-bold text-sky-400">Contact</h2>
+
+<p class="mt-6 text-gray-300">
+Email: yourmail@email.com
+</p>
+
+<a href="https://github.com/IqraOg" class="mt-4 inline-block text-sky-400">
+GitHub Profile
+</a>
+
+</section>
+
+<footer class="text-center p-6 text-gray-500">
 © 2026 Iqra Khan | Software Engineer
 </footer>
-
-<script>
-const text="Full Stack & Mobile Developer | Flutter • Python • Angular";
-let i=0;
-function typing(){
-if(i<text.length){
-document.getElementById("typing").innerHTML+=text.charAt(i);
-i++;
-setTimeout(typing,60);
-}
-}
-typing();
-</script>
 
 </body>
 </html>
